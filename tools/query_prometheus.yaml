@@ -1,0 +1,25 @@
+identity:
+  name: query_prometheus
+  author: nise-ua
+  label:
+    en_US: Query Prometheus
+  description:
+    human:
+      en_US: Query Prometheus using PromQL.
+    llm: Execute a PromQL query against a Prometheus datasource.
+extra:
+  python:
+    source: tools/query_prometheus.py
+parameters:
+  - name: query
+    type: string
+    label:
+      en_US: PromQL Query
+    required: true
+    form: form
+  - name: datasourceUID
+    type: string
+    label:
+      en_US: Datasource UID
+    required: false
+    form: form

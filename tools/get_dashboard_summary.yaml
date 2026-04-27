@@ -1,0 +1,19 @@
+identity:
+  name: get_dashboard_summary
+  author: nise-ua
+  label:
+    en_US: Get Dashboard Summary
+  description:
+    human:
+      en_US: Get a summary of a dashboard's content.
+    llm: Retrieve a high-level summary of the panels and structure of a specific dashboard using its UID.
+extra:
+  python:
+    source: tools/get_dashboard_summary.py
+parameters:
+  - name: uid
+    type: string
+    label:
+      en_US: Dashboard UID
+    required: true
+    form: form

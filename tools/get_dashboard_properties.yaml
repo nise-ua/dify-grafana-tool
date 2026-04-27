@@ -1,0 +1,19 @@
+identity:
+  name: get_dashboard_properties
+  author: nise-ua
+  label:
+    en_US: Get Dashboard Properties
+  description:
+    human:
+      en_US: Get the full properties/definition of a dashboard.
+    llm: Retrieve the detailed JSON properties of a specific dashboard using its UID.
+extra:
+  python:
+    source: tools/get_dashboard_properties.py
+parameters:
+  - name: uid
+    type: string
+    label:
+      en_US: Dashboard UID
+    required: true
+    form: form

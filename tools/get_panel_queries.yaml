@@ -1,0 +1,25 @@
+identity:
+  name: get_panel_queries
+  author: nise-ua
+  label:
+    en_US: Get Panel Queries
+  description:
+    human:
+      en_US: Get the queries for all panels or a specific panel in a dashboard.
+    llm: Extract the data source queries (PromQL, SQL, etc.) for panels in a dashboard.
+extra:
+  python:
+    source: tools/get_panel_queries.py
+parameters:
+  - name: dashboardUID
+    type: string
+    label:
+      en_US: Dashboard UID
+    required: true
+    form: form
+  - name: panelID
+    type: number
+    label:
+      en_US: Panel ID
+    required: false
+    form: form

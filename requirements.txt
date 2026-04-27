@@ -1,0 +1,3 @@
+mcp
+mcp-grafana
+httpx

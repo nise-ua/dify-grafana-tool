@@ -1,0 +1,25 @@
+identity:
+  name: query_loki
+  author: nise-ua
+  label:
+    en_US: Query Loki
+  description:
+    human:
+      en_US: Query Loki logs using LogQL.
+    llm: Execute a LogQL query against a Loki datasource.
+extra:
+  python:
+    source: tools/query_loki.py
+parameters:
+  - name: query
+    type: string
+    label:
+      en_US: LogQL Query
+    required: true
+    form: form
+  - name: datasourceUID
+    type: string
+    label:
+      en_US: Datasource UID
+    required: false
+    form: form

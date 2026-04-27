@@ -1,0 +1,13 @@
+identity:
+  name: list_datasources
+  author: nise-ua
+  label:
+    en_US: List Datasources
+  description:
+    human:
+      en_US: List all configured datasources.
+    llm: List all datasources available in the Grafana instance.
+extra:
+  python:
+    source: tools/list_datasources.py
+parameters: []

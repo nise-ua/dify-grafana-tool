@@ -1,0 +1,35 @@
+identity:
+  author: nise-ua
+  name: grafana
+  label:
+    en_US: Grafana Official MCP
+    zh_Hans: Grafana 官方 MCP
+  description:
+    en_US: Official Grafana MCP server wrapper for Dify.
+    zh_Hans: 适用于 Dify 的官方 Grafana MCP 服务器包装器。
+  icon: _assets/icon.svg
+credentials_for_provider:
+  grafana_url:
+    type: text-input
+    required: true
+    label:
+      en_US: Grafana URL
+      zh_Hans: Grafana 地址
+    placeholder:
+      en_US: https://your-grafana-instance.com
+  grafana_token:
+    type: secret-input
+    required: true
+    label:
+      en_US: Service Account Token
+      zh_Hans: 服务账号令牌
+    placeholder:
+      en_US: glsa_...
+tools:
+  - tools/search_dashboards.yaml
+  - tools/get_dashboard_summary.yaml
+  - tools/get_dashboard_properties.yaml
+  - tools/get_panel_queries.yaml
+  - tools/list_datasources.yaml
+  - tools/query_prometheus.yaml
+  - tools/query_loki.yaml
