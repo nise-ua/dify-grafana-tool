@@ -26,10 +26,10 @@ credentials_for_provider:
     placeholder:
       en_US: glsa_...
 tools:
-  - ../tools/search_dashboards.yaml
-  - ../tools/get_dashboard_summary.yaml
-  - ../tools/get_dashboard_properties.yaml
-  - ../tools/get_panel_queries.yaml
-  - ../tools/list_datasources.yaml
-  - ../tools/query_prometheus.yaml
-  - ../tools/query_loki.yaml
+  - tools/search_dashboards.yaml
+  - tools/get_dashboard_summary.yaml
+  - tools/get_dashboard_properties.yaml
+  - tools/get_panel_queries.yaml
+  - tools/list_datasources.yaml
+  - tools/query_prometheus.yaml
+  - tools/query_loki.yaml
