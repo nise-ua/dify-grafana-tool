@@ -1,7 +1,7 @@
 import asyncio
 from dify_plugin.entities.tool import ToolInvokeMessage
 from dify_plugin.interface.tool import Tool
-from .utils import GrafanaMCPWrapper
+from tools.utils import GrafanaMCPWrapper
 
 class SearchDashboardsTool(Tool):
     def _invoke(self, tool_parameters: dict) -> ToolInvokeMessage:
