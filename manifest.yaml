@@ -4,7 +4,7 @@ description:
   en_US: Grafana MCP
   zh_Hans: Grafana MCP
 category: utilities
-icon: _assets/icon.svg
+icon: icon.svg
 label:
   en_US: Grafana
   zh_Hans: Grafana
@@ -27,4 +27,4 @@ permission:
   tool:
     enabled: true
 type: plugin
-version: 0.1.2
+version: 0.1.3

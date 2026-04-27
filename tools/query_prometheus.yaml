@@ -1,7 +1,7 @@
 identity:
   name: query_prometheus
   author: nise-ua
-  icon: _assets/icon.svg
+  icon: icon.svg
   label:
     en_US: Query Prometheus
   description:

@@ -1,7 +1,7 @@
 identity:
   name: get_dashboard_properties
   author: nise-ua
-  icon: _assets/icon.svg
+  icon: icon.svg
   label:
     en_US: Get Dashboard Properties
   description:

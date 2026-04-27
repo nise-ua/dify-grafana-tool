@@ -1,7 +1,7 @@
 identity:
   name: search_dashboards
   author: nise-ua
-  icon: _assets/icon.svg
+  icon: icon.svg
   label:
     en_US: Search Dashboards
   description:

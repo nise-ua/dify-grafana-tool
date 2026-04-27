@@ -1,7 +1,7 @@
 identity:
   name: query_loki
   author: nise-ua
-  icon: _assets/icon.svg
+  icon: icon.svg
   label:
     en_US: Query Loki
   description:
