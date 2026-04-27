@@ -5,7 +5,7 @@ identity:
     en_US: Grafana MCP
   description:
     en_US: Grafana MCP server wrapper for Dify.
-  icon: icon.svg
+  icon: _assets/icon.svg
 credentials_schema:
   grafana_url:
     type: text-input

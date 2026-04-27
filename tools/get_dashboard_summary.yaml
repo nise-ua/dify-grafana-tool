@@ -1,7 +1,7 @@
 identity:
   name: get_dashboard_summary
   author: nise-ua
-  icon: icon.svg
+  icon: _assets/icon.svg
   label:
     en_US: Get Dashboard Summary
   description:
