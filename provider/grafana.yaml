@@ -3,10 +3,8 @@ identity:
   name: grafana
   label:
     en_US: Grafana MCP
-    zh_Hans: Grafana MCP
   description:
     en_US: Grafana MCP server wrapper for Dify.
-    zh_Hans: 适用于 Dify 的 Grafana MCP 服务器包装器。
   icon: icon.svg
 credentials_for_provider:
   grafana_url:
@@ -14,7 +12,6 @@ credentials_for_provider:
     required: true
     label:
       en_US: Grafana URL
-      zh_Hans: Grafana 地址
     placeholder:
       en_US: https://your-grafana-instance.com
   grafana_token:
@@ -22,7 +19,6 @@ credentials_for_provider:
     required: true
     label:
       en_US: Service Account Token
-      zh_Hans: 服务账号令牌
     placeholder:
       en_US: glsa_...
 tools:
