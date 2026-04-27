@@ -22,9 +22,9 @@ plugins:
   tools:
     - provider/grafana.yaml
 resource:
-  memory: 268435456
+  memory: 67108864
 permission:
   tool:
     enabled: true
 type: plugin
-version: 0.1.0
+version: 0.1.1

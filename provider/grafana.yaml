@@ -22,4 +22,4 @@ credentials_schema:
     placeholder:
       en_US: glsa_...
 tools:
-  - search_dashboards.yaml
+  - tools/search_dashboards.yaml
