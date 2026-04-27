@@ -40,7 +40,20 @@ jobs:
           $RUNNER_TEMP/bin/dify-plugin-linux-amd64 plugin package . -o "$PACKAGE_NAME"
           echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
 
+      - name: Create Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: |
+            ${{ steps.get_basic_info.outputs.plugin_name }}-${{ steps.get_basic_info.outputs.version }}.difypkg
+          tag_name: v${{ steps.get_basic_info.outputs.version }}
+          name: v${{ steps.get_basic_info.outputs.version }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Checkout target repo
+        if: env.PLUGIN_ACTION != ''
         uses: actions/checkout@v6
         with:
           repository: ${{ steps.get_basic_info.outputs.author }}/dify-plugins
@@ -48,8 +61,11 @@ jobs:
           token: ${{ secrets.PLUGIN_ACTION }}
           fetch-depth: 1
           persist-credentials: true
+        env:
+          PLUGIN_ACTION: ${{ secrets.PLUGIN_ACTION }}
 
       - name: Prepare and create PR
+        if: env.PLUGIN_ACTION != ''
         run: |
           PACKAGE_NAME="${{ steps.get_basic_info.outputs.plugin_name }}-${{ steps.get_basic_info.outputs.version }}.difypkg"
           mkdir -p dify-plugins/${{ steps.get_basic_info.outputs.author }}/${{ steps.get_basic_info.outputs.plugin_name }}
@@ -68,10 +84,14 @@ jobs:
           git add .
           git commit -m "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin to version ${{ steps.get_basic_info.outputs.version }}"
           git push -u origin "$BRANCH_NAME" --force
+        env:
+          PLUGIN_ACTION: ${{ secrets.PLUGIN_ACTION }}
 
       - name: Create PR via GitHub API
+        if: env.PLUGIN_ACTION != ''
         env:
           GH_TOKEN: ${{ secrets.PLUGIN_ACTION }}
+          PLUGIN_ACTION: ${{ secrets.PLUGIN_ACTION }}
         run: |
           gh pr create \
             --repo langgenius/dify-plugins \
@@ -79,15 +99,3 @@ jobs:
             --base main \
             --title "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin to version ${{ steps.get_basic_info.outputs.version }}" \
             --body "bump ${{ steps.get_basic_info.outputs.plugin_name }} plugin package to version ${{ steps.get_basic_info.outputs.version }}\n\nChanges: Updated plugin package file" || echo "PR already exists or creation skipped."
-
-      - name: Create Release
-        uses: softprops/action-gh-release@v3
-        with:
-          files: |
-            ${{ steps.get_basic_info.outputs.plugin_name }}-${{ steps.get_basic_info.outputs.version }}.difypkg
-          tag_name: v${{ steps.get_basic_info.outputs.version }}
-          name: v${{ steps.get_basic_info.outputs.version }}
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
