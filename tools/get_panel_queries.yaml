@@ -1,6 +1,7 @@
 identity:
   name: get_panel_queries
   author: nise-ua
+  icon: icon.svg
   label:
     en_US: Get Panel Queries
   description:

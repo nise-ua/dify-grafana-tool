@@ -1,6 +1,7 @@
 identity:
   name: list_datasources
   author: nise-ua
+  icon: icon.svg
   label:
     en_US: List Datasources
   description:

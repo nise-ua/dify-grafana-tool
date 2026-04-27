@@ -7,7 +7,7 @@ identity:
   description:
     en_US: Grafana MCP server wrapper for Dify.
     zh_Hans: 适用于 Dify 的 Grafana MCP 服务器包装器。
-  icon: _assets/icon.svg
+  icon: icon.svg
 credentials_for_provider:
   grafana_url:
     type: text-input
