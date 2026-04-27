@@ -1,4 +1,4 @@
-version: 0.0.5
+version: 0.0.6
 type: plugin
 author: nise-ua
 name: grafana
@@ -11,14 +11,14 @@ category: utilities
 created_at: "2026-04-27T02:13:00.00000000-04:00"
 resource:
   memory: 268435456
-  permission:
-    tool:
-      enabled: true
+permission:
+  tool:
+    enabled: true
 plugins:
   tools:
     - provider/grafana.yaml
 meta:
-  version: 0.0.5
+  version: 0.0.6
   arch:
     - amd64
     - arm64
