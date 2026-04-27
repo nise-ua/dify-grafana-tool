@@ -1,11 +1,11 @@
-version: 0.0.6
+version: 0.0.8
 type: plugin
 author: nise-ua
 name: grafana
 label:
-  en_US: Grafana MCP
+  en_US: Grafana
 description:
-  en_US: A Dify plugin that provides tools to interact with Grafana using MCP-like functionality, including querying metrics, managing dashboards, and listing datasources.
+  en_US: Grafana Tool
 icon: icon.svg
 category: utilities
 created_at: "2026-04-27T02:13:00.00000000-04:00"
@@ -18,7 +18,7 @@ plugins:
   tools:
     - provider/grafana.yaml
 meta:
-  version: 0.0.6
+  version: 0.0.1
   arch:
     - amd64
     - arm64
