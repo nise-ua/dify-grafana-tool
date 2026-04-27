@@ -9,7 +9,7 @@ class GrafanaMCPWrapper:
     def __init__(self, url: str, token: str):
         self.url = url
         self.token = token
-        # The official mcp-grafana server is usually run as 'mcp-grafana' or 'python -m mcp_grafana'
+        # The mcp-grafana server is usually run as 'mcp-grafana' or 'python -m mcp_grafana'
         # Since it's installed via pip, it should be in the path.
         self.server_params = StdioServerParameters(
             command="mcp-grafana",

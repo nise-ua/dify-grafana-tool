@@ -10,7 +10,7 @@ class SearchDashboardsTool(Tool):
         
         wrapper = GrafanaMCPWrapper(url, token)
         
-        # Prepare arguments for official mcp-grafana
+        # Prepare arguments for mcp-grafana
         args = {}
         if tool_parameters.get('query'):
             args['query'] = tool_parameters['query']

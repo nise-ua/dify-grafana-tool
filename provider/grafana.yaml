@@ -2,10 +2,10 @@ identity:
   author: nise-ua
   name: grafana
   label:
-    en_US: Grafana Official MCP
+    en_US: Grafana MCP
     zh_Hans: Grafana 官方 MCP
   description:
-    en_US: Official Grafana MCP server wrapper for Dify.
+    en_US: Grafana MCP server wrapper for Dify.
     zh_Hans: 适用于 Dify 的官方 Grafana MCP 服务器包装器。
   icon: _assets/icon.svg
 credentials_for_provider:
